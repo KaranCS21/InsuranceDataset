@@ -1,0 +1,11 @@
+StatusID,StatusName,StatusCategory
+STA01,Bound,Bound
+STA02,Lost - To Competitor,Lost
+STA03,Lost - Premium Too High,Lost
+STA04,Lost - Broker Declined,Lost
+STA05,Lost - Customer Declined,Lost
+STA06,Lost - Risk No Longer Required,Lost
+STA07,Lost - No Response,Lost
+STA08,Lost - Quote Expired,Lost
+STA09,Lost - Other,Lost
+STA10,Pending Response,Pending

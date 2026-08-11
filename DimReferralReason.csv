@@ -1,0 +1,13 @@
+ReferralReasonID,ReferralReasonName
+REF01,Outside Underwriting Authority
+REF02,High Sum Insured
+REF03,High-Risk Location
+REF04,Excessive Claims
+REF05,Unusual Construction
+REF06,Commercial Complexity
+REF07,High-Risk Occupancy
+REF08,Flood Exposure
+REF09,Bushfire Exposure
+REF10,Large Loss History
+REF11,Special Underwriting Requirement
+REF12,Other

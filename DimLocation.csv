@@ -1,0 +1,19 @@
+LocationKey,State,City,Region,FloodRiskBaseline,BushfireRiskBaseline
+1,NSW,Sydney,Metro,Medium,Medium
+2,NSW,Newcastle,Regional,Medium,Medium
+3,NSW,Wollongong,Regional,Medium,Medium
+4,QLD,Brisbane,Metro,High,High
+5,QLD,Gold Coast,Regional,High,High
+6,QLD,Townsville,Regional,High,High
+7,VIC,Melbourne,Metro,Low,Medium
+8,VIC,Geelong,Regional,Low,Medium
+9,VIC,Ballarat,Regional,Low,Medium
+10,WA,Perth,Metro,Medium,High
+11,WA,Bunbury,Regional,Medium,High
+12,SA,Adelaide,Metro,Low,Medium
+13,SA,Mount Gambier,Regional,Low,Medium
+14,NT,Darwin,Metro,High,Medium
+15,NT,Alice Springs,Regional,High,Medium
+16,ACT,Canberra,Metro,Low,Low
+17,TAS,Hobart,Metro,Low,Low
+18,TAS,Launceston,Regional,Low,Low

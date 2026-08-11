@@ -1,0 +1,105 @@
+PropertyProfileKey,Classification,PropertyType,ConstructionType,OccupancyType,RatingFactorTier
+1,Residential,House,Brick,Owner Occupied,Low
+2,Residential,House,Brick,Tenant Occupied,Low
+3,Residential,House,Concrete,Owner Occupied,Low
+4,Residential,House,Concrete,Tenant Occupied,Low
+5,Residential,House,Concrete,Vacant,High
+6,Residential,House,Steel,Tenant Occupied,Low
+7,Residential,House,Steel,Vacant,High
+8,Residential,House,Timber,Owner Occupied,Medium
+9,Residential,House,Timber,Tenant Occupied,Medium
+10,Residential,House,Mixed,Owner Occupied,Low
+11,Residential,Apartment,Brick,Tenant Occupied,Low
+12,Residential,Apartment,Concrete,Tenant Occupied,Low
+13,Residential,Apartment,Steel,Tenant Occupied,Low
+14,Residential,Apartment,Timber,Owner Occupied,Medium
+15,Residential,Apartment,Mixed,Owner Occupied,Low
+16,Residential,Apartment,Mixed,Vacant,Medium
+17,Residential,Townhouse,Brick,Vacant,High
+18,Residential,Townhouse,Concrete,Owner Occupied,Low
+19,Residential,Townhouse,Concrete,Tenant Occupied,Low
+20,Residential,Townhouse,Concrete,Vacant,High
+21,Residential,Townhouse,Steel,Owner Occupied,Low
+22,Residential,Townhouse,Steel,Tenant Occupied,Low
+23,Residential,Townhouse,Steel,Vacant,High
+24,Residential,Townhouse,Timber,Owner Occupied,Medium
+25,Residential,Townhouse,Mixed,Tenant Occupied,Low
+26,Residential,Villa,Brick,Tenant Occupied,Low
+27,Residential,Villa,Brick,Vacant,High
+28,Residential,Villa,Concrete,Tenant Occupied,Low
+29,Residential,Villa,Concrete,Vacant,High
+30,Residential,Villa,Steel,Tenant Occupied,Low
+31,Residential,Villa,Steel,Vacant,High
+32,Residential,Villa,Timber,Vacant,High
+33,Residential,Villa,Mixed,Vacant,High
+34,Residential,Unit,Brick,Tenant Occupied,Low
+35,Residential,Unit,Brick,Vacant,High
+36,Residential,Unit,Concrete,Tenant Occupied,Low
+37,Residential,Unit,Steel,Tenant Occupied,Low
+38,Residential,Unit,Timber,Owner Occupied,Medium
+39,Residential,Unit,Timber,Vacant,High
+40,Residential,Unit,Mixed,Vacant,High
+41,Commercial,Office,Concrete,Tenant Occupied,Medium
+42,Commercial,Office,Concrete,Mixed Use,Medium
+43,Commercial,Office,Steel,Vacant,High
+44,Commercial,Office,Steel,Mixed Use,Medium
+45,Commercial,Office,Timber,Tenant Occupied,Medium
+46,Commercial,Office,Timber,Mixed Use,Medium
+47,Commercial,Office,Mixed,Tenant Occupied,Medium
+48,Commercial,Office,Mixed,Vacant,High
+49,Commercial,Retail,Brick,Tenant Occupied,Medium
+50,Commercial,Retail,Concrete,Tenant Occupied,Medium
+51,Commercial,Retail,Steel,Mixed Use,Medium
+52,Commercial,Retail,Timber,Mixed Use,Medium
+53,Commercial,Retail,Mixed,Commercial Occupied,Medium
+54,Commercial,Retail,Mixed,Vacant,High
+55,Commercial,Warehouse,Brick,Commercial Occupied,High
+56,Commercial,Warehouse,Brick,Mixed Use,High
+57,Commercial,Warehouse,Concrete,Commercial Occupied,High
+58,Commercial,Warehouse,Concrete,Mixed Use,High
+59,Commercial,Warehouse,Steel,Mixed Use,High
+60,Commercial,Warehouse,Timber,Commercial Occupied,High
+61,Commercial,Warehouse,Timber,Tenant Occupied,High
+62,Commercial,Warehouse,Timber,Vacant,Very High
+63,Commercial,Warehouse,Timber,Mixed Use,High
+64,Commercial,Warehouse,Mixed,Tenant Occupied,High
+65,Commercial,Warehouse,Mixed,Mixed Use,High
+66,Commercial,Restaurant,Brick,Commercial Occupied,High
+67,Commercial,Restaurant,Brick,Mixed Use,High
+68,Commercial,Restaurant,Concrete,Commercial Occupied,High
+69,Commercial,Restaurant,Concrete,Tenant Occupied,High
+70,Commercial,Restaurant,Steel,Commercial Occupied,High
+71,Commercial,Restaurant,Steel,Tenant Occupied,High
+72,Commercial,Restaurant,Timber,Vacant,Very High
+73,Commercial,Restaurant,Timber,Mixed Use,High
+74,Commercial,Restaurant,Mixed,Commercial Occupied,High
+75,Commercial,Industrial,Brick,Mixed Use,High
+76,Commercial,Industrial,Concrete,Commercial Occupied,High
+77,Commercial,Industrial,Concrete,Tenant Occupied,High
+78,Commercial,Industrial,Concrete,Mixed Use,High
+79,Commercial,Industrial,Steel,Mixed Use,High
+80,Commercial,Industrial,Timber,Commercial Occupied,High
+81,Commercial,Industrial,Timber,Tenant Occupied,High
+82,Commercial,Industrial,Mixed,Tenant Occupied,High
+83,Commercial,Industrial,Mixed,Vacant,Very High
+84,Commercial,Industrial,Mixed,Mixed Use,High
+85,Commercial,Medical,Brick,Vacant,High
+86,Commercial,Medical,Concrete,Commercial Occupied,Medium
+87,Commercial,Medical,Concrete,Vacant,High
+88,Commercial,Medical,Concrete,Mixed Use,Medium
+89,Commercial,Medical,Steel,Tenant Occupied,Medium
+90,Commercial,Medical,Steel,Vacant,High
+91,Commercial,Medical,Steel,Mixed Use,Medium
+92,Commercial,Medical,Timber,Commercial Occupied,Medium
+93,Commercial,Medical,Mixed,Commercial Occupied,Medium
+94,Commercial,Medical,Mixed,Vacant,High
+95,Commercial,Medical,Mixed,Mixed Use,Medium
+96,Commercial,Mixed Use,Brick,Commercial Occupied,Medium
+97,Commercial,Mixed Use,Steel,Commercial Occupied,Medium
+98,Commercial,Mixed Use,Steel,Tenant Occupied,Medium
+99,Commercial,Mixed Use,Steel,Vacant,High
+100,Commercial,Mixed Use,Timber,Vacant,High
+101,Commercial,Mixed Use,Mixed,Commercial Occupied,Medium
+102,Commercial,Mixed Use,Mixed,Tenant Occupied,Medium
+103,Commercial,Mixed Use,Mixed,Vacant,High
+104,Commercial,Mixed Use,Mixed,Mixed Use,Medium

@@ -1,0 +1,16 @@
+ErrorCategoryID,ErrorCategoryName,TypicalSeverity
+ERR01,Property Classification,Medium
+ERR02,Building Value,High
+ERR03,Contents Value,Medium
+ERR04,Address,Low
+ERR05,State,High
+ERR06,Construction,Medium
+ERR07,Occupancy,Medium
+ERR08,Claims History,High
+ERR09,Coverage,High
+ERR10,Excess,Medium
+ERR11,Broker Details,Low
+ERR12,Missing Information,Medium
+ERR13,Data Entry,Low
+ERR14,Rater Configuration,Critical
+ERR15,Other,Low
