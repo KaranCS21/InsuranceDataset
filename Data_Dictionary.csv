@@ -1,0 +1,116 @@
+Table,Column,DataType,Description,BusinessMeaning
+DimDate,DateKey,Integer,"Surrogate key, YYYYMMDD",Join key from fact tables to DimDate
+DimDate,Date,Date,Calendar date,Human-readable date
+DimDate,Year,Integer,Calendar year,Used for YoY analysis
+DimDate,Quarter,Text,Calendar quarter (Q1-Q4),Used for QoQ analysis
+DimDate,MonthNumber,Integer,Month number 1-12,Sorting months correctly
+DimDate,MonthName,Text,Full month name,Display in visuals
+DimDate,MonthYear,Text,Abbreviated month + year,Axis label for trend charts
+DimDate,WeekOfYear,Integer,ISO week number,Weekly trend analysis
+DimDate,DayOfWeek,Integer,Day number 1-7,Weekday pattern analysis
+DimDate,DayName,Text,Full weekday name,Display / weekday seasonality
+DimDate,IsWeekend,Boolean,True if Saturday/Sunday,Filter business-day-only SLA calcs
+DimDate,FinancialYear,Text,Australian FY (Jul-Jun),AU-aligned FY reporting
+DimLocation,LocationKey,Integer,Surrogate key,Join key from FactQuote
+DimLocation,State,Text,Australian state/territory code,Geographic analysis
+DimLocation,City,Text,City name,Geographic drill-down
+DimLocation,Region,Text,Metro or Regional classification,Metro vs regional risk/volume analysis
+DimLocation,FloodRiskBaseline,Text,Baseline flood risk tier for the state,Drives synthetic flood flag; usable for risk commentary
+DimLocation,BushfireRiskBaseline,Text,Baseline bushfire risk tier for the state,Drives synthetic bushfire flag; usable for risk commentary
+DimBroker,BrokerID,Text,Unique broker identifier,"Primary key, join to fact tables"
+DimBroker,BrokerName,Text,Fictional broker company name,Broker performance reporting
+DimBroker,State,Text,Broker's home state,Broker geographic segmentation
+DimBroker,City,Text,Broker's home city,Broker geographic segmentation
+DimBroker,BrokerType,Text,Retail/Wholesale/Corporate/Regional Broker,Broker segment analysis
+DimBroker,BrokerSize,Text,Small/Medium/Large,Broker tiering for volume analysis
+DimBroker,ActiveStatus,Text,Active/Inactive,Filter current vs historical brokers
+DimBroker,TypicalMonthlyVolume,Integer,Approximate typical monthly submissions,Benchmark actual vs typical volume
+DimEmployee,EmployeeID,Text,Unique employee identifier,"Primary key, join to fact tables"
+DimEmployee,EmployeeName,Text,Fictional employee name,Employee performance reporting
+DimEmployee,Role,Text,Quoting Agent/Quality Reviewer/Underwriter/Senior Underwriter/Team Leader,Role-based analysis
+DimEmployee,Team,Text,Internal team name,Team-level performance rollups
+DimEmployee,Location,Text,Office location,Organizational reporting
+DimEmployee,JoiningDate,Date,Date employee joined the organization,Tenure analysis
+DimEmployee,ExperienceLevel,Text,Junior/Mid/Senior,Experience vs performance analysis
+DimEmployee,ActiveStatus,Text,Active/Inactive,Filter current staff
+DimProperty,PropertyProfileKey,Integer,Surrogate key,Join key from FactQuote
+DimProperty,Classification,Text,Residential or Commercial,Primary risk segmentation
+DimProperty,PropertyType,Text,House/Apartment/Office/Warehouse etc.,Property type analysis
+DimProperty,ConstructionType,Text,Brick/Concrete/Steel/Timber/Mixed,Construction risk analysis
+DimProperty,OccupancyType,Text,Owner Occupied/Tenant Occupied/Vacant/etc.,Occupancy risk analysis
+DimProperty,RatingFactorTier,Text,Low/Medium/High/Very High rating tier,Simplified risk tiering for reporting
+DimErrorCategory,ErrorCategoryID,Text,Unique error category code,"Primary key, join from FactQualityReview"
+DimErrorCategory,ErrorCategoryName,Text,"e.g. Building Value, Address, Coverage",Error category analysis
+DimErrorCategory,TypicalSeverity,Text,Most common severity for this category,Reference for expected impact
+DimReferralReason,ReferralReasonID,Text,Unique referral reason code,"Primary key, join from FactUnderwriting"
+DimReferralReason,ReferralReasonName,Text,"e.g. High Sum Insured, Flood Exposure",Referral driver analysis
+DimStatus,StatusID,Text,Unique status code,"Primary key, join from FactBinding"
+DimStatus,StatusName,Text,"e.g. Bound, Lost - To Competitor",Outcome reporting
+DimStatus,StatusCategory,Text,Bound/Lost/Pending,High-level outcome grouping
+FactQuote,QuoteID,Text,Unique quote request identifier,"Primary key, grain of the table; joins to all downstream facts"
+FactQuote,ReceivedDateKey,Integer,FK to DimDate (received date),Active date relationship for the model
+FactQuote,ReceivedDateTime,Datetime/Text,Timestamp broker request was received,SLA start point (note: some rows in alternate format - cleaning exercise)
+FactQuote,BrokerID,Text,FK to DimBroker,Broker analysis
+FactQuote,QuotingAgentID,Text,FK to DimEmployee (rater entry agent),Employee productivity analysis
+FactQuote,LocationKey,Integer,FK to DimLocation,Geographic analysis
+FactQuote,PropertyProfileKey,Integer,FK to DimProperty,Property/risk analysis
+FactQuote,BuildingValue,Decimal,Building value in AUD,Premium driver
+FactQuote,ContentsValue,Decimal,Contents value in AUD,Premium driver
+FactQuote,SumInsured,Decimal,Building + contents value in AUD,Core exposure measure
+FactQuote,PropertyAge,Integer,Property age in years,Risk driver
+FactQuote,NumProperties,Integer,Number of properties in the request,Multi-property risk analysis
+FactQuote,NumFloors,Integer,Number of floors,Risk driver (mainly commercial)
+FactQuote,ClaimsCount5Yr,Integer,Number of claims in prior 5 years,Risk/premium driver
+FactQuote,ClaimsAmount5Yr,Decimal,Total prior claims amount AUD,Risk/premium driver
+FactQuote,RecentClaimIndicator,Boolean,1 if a claim occurred recently,Risk flag
+FactQuote,FloodRiskFlag,Boolean,1 if property is flood-exposed,Risk flag / referral driver
+FactQuote,BushfireRiskFlag,Boolean,1 if property is bushfire-exposed,Risk flag / referral driver
+FactQuote,TheftRiskFlag,Boolean,1 if elevated theft risk,Risk flag
+FactQuote,HighRiskLocationFlag,Boolean,1 if location is high-risk overall,Risk flag
+FactQuote,RiskScore,Decimal,Composite risk score 0-100,"Core risk measure, drives premium & referral"
+FactQuote,RequestedCoverage,Text,Building & Contents/Building Only/Contents Only,Coverage analysis
+FactQuote,AssignedDateTime,Datetime,Timestamp quote assigned to agent,SLA stage timestamp
+FactQuote,RaterCompletedDateTime,Datetime,Timestamp rater entry completed,SLA stage timestamp
+FactQuote,RaterStatus,Text,Completed/Abandoned/Duplicate,Funnel stage-1 outcome
+FactQuote,ProcessingDurationHours,Decimal,Hours from assignment to rater completion,Agent turnaround time measure
+FactQuote,ReworkAtRaterFlag,Boolean,1 if rater entry required rework before QA,Early rework indicator
+FactQualityReview,ReviewID,Text,Unique QA review event identifier,Primary key; grain is one row per review pass
+FactQualityReview,QuoteID,Text,FK to FactQuote,Links QA outcome to the quote
+FactQualityReview,QuotingAgentID,Text,FK to DimEmployee (agent being reviewed),Attributes errors to the agent who entered the data
+FactQualityReview,ReviewerID,Text,FK to DimEmployee (quality reviewer),Reviewer workload/performance analysis
+FactQualityReview,ReviewDate,Date,Date of review,Trend analysis
+FactQualityReview,ReviewSequence,Integer,"1 = first pass, 2 = post-rework pass",Rework loop tracking
+FactQualityReview,ErrorFound,Boolean,True if an error was found,Core quality measure
+FactQualityReview,ErrorCategoryID,Text,FK to DimErrorCategory (null if no error),Error category analysis
+FactQualityReview,ErrorSeverity,Text,Low/Medium/High/Critical (null if no error),Error severity analysis
+FactQualityReview,ReworkRequired,Boolean,True if rework was required,Rework volume analysis
+FactQualityReview,ErrorResolved,Boolean,True if the error was resolved,Resolution tracking
+FactQualityReview,ReworkDurationHours,Decimal,Hours spent on rework (null if none),Rework cost/time analysis
+FactQualityReview,FirstTimeRight,Boolean,True only if sequence 1 and no error found,Core FTR% measure
+FactUnderwriting,UnderwritingID,Text,Unique underwriting record identifier,Primary key; grain is one row per quote reaching underwriting
+FactUnderwriting,QuoteID,Text,FK to FactQuote,Links underwriting outcome to the quote
+FactUnderwriting,UnderwriterID,Text,FK to DimEmployee,Underwriter performance analysis
+FactUnderwriting,UnderwritingDate,Date,Date underwriting was performed,Trend analysis
+FactUnderwriting,RiskScore,Decimal,Risk score carried into underwriting,Underwriting risk measure
+FactUnderwriting,Premium,Decimal,Calculated premium in AUD,Core premium measure
+FactUnderwriting,PremiumRange,Text,Bucketed premium range,Premium distribution analysis
+FactUnderwriting,UnderwritingDecision,Text,Approved/Declined/Referred,Underwriting outcome analysis
+FactUnderwriting,IndiaEligibleFlag,Boolean,True if within India underwriting authority,India vs Australia underwriting split
+FactUnderwriting,ReferredToAustraliaFlag,Boolean,True if referred to Australia,Core referral measure
+FactUnderwriting,ReferralReasonID,Text,FK to DimReferralReason (null if not referred),Referral driver analysis
+FactUnderwriting,AustralianUnderwriterDecision,Text,Approved/Approved with Conditions/Declined (null if not referred),Referral outcome analysis
+FactUnderwriting,ReferralTurnaroundHours,Decimal,Hours for Australian referral decision (null if not referred),Referral SLA analysis
+FactUnderwriting,UnderwritingTurnaroundHours,Decimal,Hours from QA-pass to underwriting completion,Underwriting SLA analysis
+FactUnderwriting,QSTBDate,Date,Date quote sent to broker (null if declined),Funnel stage timestamp
+FactUnderwriting,FinalPremium,Decimal,Final premium sent to broker (null if declined),Premium sent measure
+FactUnderwriting,QuoteValidityDays,Integer,Days the quote remains valid,Quote lifecycle tracking
+FactUnderwriting,CommunicationStatus,Text,Sent/Acknowledged/No Response/N/A,Broker communication tracking
+FactBinding,BindingID,Text,Unique binding outcome identifier,Primary key; grain is one row per quote that reached QSTB
+FactBinding,QuoteID,Text,FK to FactQuote / FactUnderwriting,Links outcome to the quote
+FactBinding,StatusID,Text,FK to DimStatus,Outcome analysis
+FactBinding,BrokerAcceptanceDate,Date,Date broker accepted (null if not bound),Conversion timing analysis
+FactBinding,BindingDate,Date,Date policy was bound (null if not bound),Core binding measure
+FactBinding,BoundFlag,Boolean,True if the quote resulted in a bound policy,Core binding rate measure
+FactBinding,FinalPremium,Decimal,Final bound/quoted premium AUD (null if pending),Revenue measure
+FactBinding,PolicyPropertyCount,Integer,Number of properties bound (0 if not bound),Bound property volume
+FactBinding,TurnaroundDaysQSTBtoOutcome,Decimal,Days from QSTB to bind/lost outcome,Conversion speed analysis

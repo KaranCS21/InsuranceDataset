@@ -1,0 +1,43 @@
+BrokerID,BrokerName,State,City,BrokerType,BrokerSize,ActiveStatus,TypicalMonthlyVolume
+B0001,HARBOUR INSURANCE BROKERS,WA,Bunbury,Corporate Broker,Medium,Active,58
+B0002,Southern Cross Insurance Brokers,WA,Bunbury,Retail Broker,Medium,Active,43
+B0003,Outback Insurance Brokers,VIC,Geelong,Retail Broker,Small,Active,30
+B0004,Coastal Insurance Brokers,WA,Perth,Corporate Broker,Small,Inactive,25
+B0005,Bridgeview Insurance Brokers,WA,Bunbury,Wholesale Broker,Small,Active,14
+B0006,Sterling Insurance Brokers,WA,Perth,Retail Broker,Small,Active,34
+B0007,Ironbark Insurance Brokers,NSW,Wollongong,Retail Broker,Medium,Active,42
+B0008,Waratah Insurance Brokers,VIC,Melbourne,Corporate Broker,Large,Active,103
+B0009,Redgum Insurance Brokers,VIC,Geelong,Retail Broker,Small,Active,13
+B0010,Blue Gum Insurance Brokers,VIC,Melbourne,Wholesale Broker,Medium,Active,46
+B0011,Pacific Rim Insurance Brokers,VIC,Geelong,Wholesale Broker,Medium,Active,60
+B0012,  Golden West Insurance Brokers  ,VIC,Ballarat,Retail Broker,Medium,Active,47
+B0013,Northline Insurance Brokers,SA,Adelaide,Retail Broker,Small,Active,15
+B0014,Eastwood Insurance Brokers,VIC,Geelong,Wholesale Broker,Medium,Active,49
+B0015,Kingsford Insurance Brokers,NSW,Sydney,Corporate Broker,Medium,Active,75
+B0016,Riverside Insurance Brokers,NSW,Newcastle,Retail Broker,Small,Active,27
+B0017,Highland Insurance Brokers,QLD,Townsville,Retail Broker,Large,Active,135
+B0018,Anchor Point Insurance Brokers,NSW,Wollongong,Corporate Broker,Medium,Active,68
+B0019,Summit Insurance Brokers,NSW,Newcastle,Wholesale Broker,Small,Active,32
+B0020,Crestview Insurance Brokers,NSW,Newcastle,Corporate Broker,Medium,Active,48
+B0021,Wattle Insurance Brokers,VIC,Melbourne,Retail Broker,Medium,Active,43
+B0022,Boomerang Insurance Brokers,QLD,Gold Coast,Retail Broker,Medium,Active,48
+B0023,Windward Insurance Brokers,VIC,Geelong,Wholesale Broker,Small,Inactive,18
+B0024,Cardinal Insurance Brokers,WA,Perth,Wholesale Broker,Medium,Inactive,42
+B0025,Fairview Insurance Brokers,QLD,Townsville,Retail Broker,Medium,Active,47
+B0026,Meridian Insurance Brokers,WA,Perth,Retail Broker,Medium,Active,64
+B0027,Union Point Insurance Brokers,NSW,Sydney,Corporate Broker,Medium,Active,62
+B0028,Vantage Insurance Brokers,NSW,Sydney,Wholesale Broker,Small,Active,10
+B0029,bayline insurance brokers,nsw,Sydney,Retail Broker,Medium,Active,79
+B0030,Parkway Insurance Brokers,NSW,Newcastle,Retail Broker,Large,Active,139
+B0031,  Greenfield Insurance Brokers  ,SA,Adelaide,Wholesale Broker,Small,Active,32
+B0032,Silverline Insurance Brokers,QLD,Townsville,Corporate Broker,Small,Inactive,12
+B0033,  Woodlands Insurance Brokers  ,nsw,Sydney,Retail Broker,Small,Active,30
+B0034,Beacon Insurance Brokers,NSW,Sydney,Corporate Broker,Large,Active,91
+B0035,Cornerstone Insurance Brokers,NSW,Sydney,Retail Broker,Medium,Active,48
+B0036,Trailblazer Insurance Brokers,VIC,Ballarat,Retail Broker,Large,Active,139
+B0037,Ridgeline Insurance Brokers,NSW,Newcastle,Regional Broker,Small,Active,13
+B0038,Continental Insurance Brokers,VIC,Melbourne,Retail Broker,Large,Active,124
+B0039,Novaline Insurance Brokers,VIC,Ballarat,Retail Broker,Medium,Inactive,42
+B0040,Frontier Insurance Brokers,nt,Alice Springs,Wholesale Broker,Medium,Active,64
+B0041,  Landmark Insurance Brokers  ,WA,Perth,Retail Broker,Medium,Active,76
+B0042,Precision Insurance Brokers,VIC,Melbourne,Retail Broker,Medium,Active,78
